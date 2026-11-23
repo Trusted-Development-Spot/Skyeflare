@@ -1,6 +1,0 @@
-{
-  "name": "SkyeFlare — Web Hosting Comparison & Real Cost Calculator",
-  "description": "Independent web hosting comparison, 1-to-3 year true cost calculator, and verified promo deal tracker covering intro vs. renewal pricing across major hosting providers.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
