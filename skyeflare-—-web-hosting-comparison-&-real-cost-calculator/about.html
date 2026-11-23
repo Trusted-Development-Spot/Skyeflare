@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About SkyeFlare – Automated Deal Tracking &amp; Editorial Independence</title>
+    <meta
+      name="description"
+      content="Learn how SkyeFlare monitors hosting intro and renewal prices every 24 hours, verifies promo terms, and funds free tools through transparent affiliate and ad partnerships."
+    />
+    <link rel="canonical" href="https://skyeflare.com/about.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SkyeFlare" />
+    <meta property="og:url" content="https://skyeflare.com/about.html" />
+    <meta property="og:title" content="About SkyeFlare – Automated Deal Tracking &amp; Editorial Independence" />
+    <meta
+      property="og:description"
+      content="How SkyeFlare's automated deal-tracking pipeline works, our ranking math, and affiliate disclosure."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400..700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <header class="border-b border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-8 px-4 py-4 sm:px-6">
+        <a href="/index.html" class="font-display text-lg font-bold tracking-tight text-slate-900 whitespace-nowrap shrink-0">SkyeFlare</a>
+
+        <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
+          <a href="/index.html" class="hover:text-slate-900 hover:underline underline-offset-4 sf-transition whitespace-nowrap shrink-0">Compare</a>
+          <a href="/hostinger-vs-bluehost.html" class="hover:text-slate-900 hover:underline underline-offset-4 sf-transition whitespace-nowrap shrink-0">Hostinger vs Bluehost</a>
+          <a href="/coupons.html" class="hover:text-slate-900 hover:underline underline-offset-4 sf-transition whitespace-nowrap shrink-0">Coupons</a>
+          <a href="/about.html" class="text-slate-900 underline underline-offset-4 whitespace-nowrap shrink-0">About</a>
+          <a href="/contact.html" class="hover:text-slate-900 hover:underline underline-offset-4 sf-transition whitespace-nowrap shrink-0">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="/index.html#cost-calculator" class="rounded-md bg-indigo-700 px-4 py-2 text-xs font-semibold text-white hover:bg-indigo-800 sf-transition whitespace-nowrap shrink-0">
+            Cost Calculator
+          </a>
+          <button type="button" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="Toggle navigation menu" class="rounded-md border border-slate-200 p-2 text-slate-700 hover:bg-slate-50 lg:hidden">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu-panel" class="hidden border-t border-slate-200 bg-white px-4 py-3 lg:hidden">
+        <nav aria-label="Mobile navigation" class="flex flex-col gap-2 text-sm font-medium text-slate-700">
+          <a href="/index.html" class="rounded-md px-3 py-2 hover:bg-slate-50">Compare Hosts</a>
+          <a href="/hostinger-vs-bluehost.html" class="rounded-md px-3 py-2 hover:bg-slate-50">Hostinger vs Bluehost</a>
+          <a href="/coupons.html" class="rounded-md px-3 py-2 hover:bg-slate-50">Coupons &amp; Deals</a>
+          <a href="/about.html" class="rounded-md bg-slate-100 px-3 py-2 text-slate-900">About SkyeFlare</a>
+          <a href="/contact.html" class="rounded-md px-3 py-2 hover:bg-slate-50">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <div class="text-xs text-slate-500">
+        About SkyeFlare &middot; Registry synced <span data-last-updated class="font-mono">Nov 22, 2026</span>
+      </div>
+      <h1 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+        Built to Make Hosting Renewal Math Impossible to Hide
+      </h1>
+      <p class="mt-4 text-base leading-relaxed text-slate-600">
+        SkyeFlare (skyeflare.com) is an independent web hosting comparison utility, 1-to-3 year Total Cost of Ownership (TCO) calculator, and active promotional deal tracker. We do not operate servers or sell hosting plans of our own.
+      </p>
+
+      <div class="mt-10 space-y-8">
+        <section class="rounded-xl border border-slate-200 bg-white p-6">
+          <h2 class="text-lg font-bold text-slate-900">01. How Our Automated Deal-Tracking Pipeline Works</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">
+            Every 24 hours, an automated GitHub Actions verification job runs <code class="font-mono text-xs text-slate-800">scripts/update_deals.py</code> against official public offer pages for Hostinger, Bluehost, Namecheap, SiteGround, A2 Hosting, DreamHost, IONOS, and Cloudways.
+          </p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li>&bull; <strong>Schema Validation:</strong> Every update checks that introductory rate, billing term length, renewal rate, and money-back guarantee fields pass strict bounds validation before touching <code class="font-mono text-xs text-slate-800">data/hosting-deals.json</code>.</li>
+            <li>&bull; <strong>Fallback Preservation:</strong> If an upstream provider temporarily blocks automated requests or returns an incomplete response, SkyeFlare preserves the last verified baseline rather than displaying broken prices.</li>
+            <li>&bull; <strong>Zero Fake Codes:</strong> We explicitly separate verified alphanumeric codes (such as Namecheap's monthly promo hub) from auto-applied checkout offers.</li>
+          </ul>
+        </section>
+
+        <section class="rounded-xl border border-slate-200 bg-white p-6">
+          <h2 class="text-lg font-bold text-slate-900">02. Editorial Independence &amp; Ranking Methodology</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">
+            Our Smart Filter &amp; Recommendation Engine ranks matching providers mathematically by 36-month total cost (introductory term + subsequent renewal months + standard domain renewal after Year 1), resource fit, and renewal stability. Providers cannot pay to override TCO calculations or conceal their renewal rates.
+          </p>
+        </section>
+
+        <section class="rounded-xl border border-slate-200 bg-white p-6">
+          <h2 class="text-lg font-bold text-slate-900">03. Affiliate &amp; Advertising Disclosure</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">
+            SkyeFlare remains free to use because it is supported by two transparent revenue streams:
+          </p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li>&bull; <strong>Affiliate Links:</strong> Outbound "Activate Deal" links may earn SkyeFlare a referral commission from the hosting provider at zero additional cost to you.</li>
+            <li>&bull; <strong>Programmatic Advertising:</strong> We display clearly labeled, non-intrusive display advertisements through vetted ad partners (such as RevBid). Ad placements never cover interactive buttons or influence comparison rankings.</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white mt-12">
+      <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div class="grid gap-8 md:grid-cols-4">
+          <div class="md:col-span-2">
+            <a href="/index.html" class="font-display text-base font-bold text-slate-900">SkyeFlare</a>
+            <p class="mt-2 max-w-md text-xs leading-relaxed text-slate-600">Independent web hosting comparison, true 1-to-3 year cost calculator, and verified promo deal registry.</p>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold text-slate-900">Comparison &amp; Deals</h3>
+            <ul class="mt-3 space-y-2 text-xs text-slate-600">
+              <li><a href="/index.html" class="hover:text-slate-900">Hosting Matrix</a></li>
+              <li><a href="/hostinger-vs-bluehost.html" class="hover:text-slate-900">Hostinger vs. Bluehost</a></li>
+              <li><a href="/coupons.html" class="hover:text-slate-900">Active Coupons &amp; Promos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold text-slate-900">Trust &amp; Legal</h3>
+            <ul class="mt-3 space-y-2 text-xs text-slate-600">
+              <li><a href="/about.html" class="hover:text-slate-900">About &amp; Methodology</a></li>
+              <li><a href="/contact.html" class="hover:text-slate-900">Contact Us</a></li>
+              <li><a href="/privacy-policy.html" class="hover:text-slate-900">Privacy Policy</a></li>
+              <li><a href="/terms.html" class="hover:text-slate-900">Terms &amp; Affiliate Disclosure</a></li>
+              <li><button type="button" data-open-cookie-settings class="text-left hover:text-slate-900 underline underline-offset-2">Cookie Settings</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-col gap-2 border-t border-slate-100 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <span>&copy; 2026 SkyeFlare (skyeflare.com). All rights reserved.</span>
+          <span>Data synced <span data-last-updated class="font-mono">Nov 22, 2026</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/assets/app.js"></script>
+  </body>
+</html>
