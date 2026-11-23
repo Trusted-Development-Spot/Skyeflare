@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyeFlare – Hosting Comparison, True Cost &amp; Promo Tracker</title>
+    <meta
+      name="description"
+      content="Compare real introductory vs. renewal web hosting prices, calculate 1-to-3 year total costs, and verify active promo deals across 8 major providers."
+    />
+    <link rel="canonical" href="https://skyeflare.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SkyeFlare" />
+    <meta property="og:url" content="https://skyeflare.com/" />
+    <meta property="og:title" content="SkyeFlare – Hosting Comparison, True Cost &amp; Promo Tracker" />
+    <meta
+      property="og:description"
+      content="Compare real introductory vs. renewal web hosting prices, calculate 1-to-3 year total costs, and verify active promo deals across 8 major providers."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SkyeFlare – Hosting Comparison, True Cost &amp; Promo Tracker" />
+    <meta
+      name="twitter:description"
+      content="Independent hosting cost calculator and verified coupon tracker exposing renewal spikes before you commit."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400..700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "SkyeFlare Hosting Cost Calculator & Comparison",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All",
+            "url": "https://skyeflare.com/",
+            "description": "Independent web hosting price comparison tool, 1-to-3 year true cost calculator, and verified promotional deal aggregator covering Hostinger, Bluehost, Namecheap, SiteGround, A2 Hosting, DreamHost, IONOS, and Cloudways.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does SkyeFlare sell its own web hosting plans?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. SkyeFlare is an independent comparison, real cost calculator, and promotional deal tracker. All hosting plans are purchased directly from third-party providers such as Hostinger, Bluehost, Namecheap, SiteGround, A2 Hosting, DreamHost, IONOS, and Cloudways."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is the 3-year hosting cost different from the advertised monthly intro price?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most shared hosting providers advertise an introductory monthly rate that requires paying 12 to 48 months upfront, followed by a regular renewal rate that is 2x to 4.5x higher once the first term ends. SkyeFlare calculates both phases plus domain renewal fees."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why do some hosts show an Auto-Applied Deal instead of a coupon code?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Many providers including Hostinger, Bluehost, SiteGround, DreamHost, and IONOS apply their deepest promotional discounts automatically through official offer pages rather than requiring a manual code box. SkyeFlare never invents fake coupon strings."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <!-- Shared Top Navigation (3-Zone Contract) -->
+    <header class="border-b border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-8 px-4 py-4 sm:px-6">
+        <a
+          href="/index.html"
+          class="font-display text-lg font-bold tracking-tight text-slate-900 whitespace-nowrap shrink-0"
+        >
+          SkyeFlare
+        </a>
+
+        <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
+          <a href="/index.html" class="text-slate-900 underline underline-offset-4 whitespace-nowrap shrink-0">Compare</a>
+          <a href="/hostinger-vs-bluehost.html" class="hover:text-slate-900 hover:underline underline-offset-4 sf-transition whitespace-nowrap shrink-0">Hostinger vs Bluehost</a>
+          <a href="/coupons.html" class="hover:text-slate-900 hover:underline underline-offset-4 sf-transition whitespace-nowrap shrink-0">Coupons</a>
+          <a href="/about.html" class="hover:text-slate-900 hover:underline underline-offset-4 sf-transition whitespace-nowrap shrink-0">About</a>
+          <a href="/contact.html" class="hover:text-slate-900 hover:underline underline-offset-4 sf-transition whitespace-nowrap shrink-0">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3 shrink-0">
+          <a
+            href="#cost-calculator"
+            class="rounded-md bg-indigo-700 px-4 py-2 text-xs font-semibold text-white hover:bg-indigo-800 sf-transition whitespace-nowrap shrink-0"
+          >
+            Cost Calculator
+          </a>
+          <button
+            type="button"
+            id="mobile-menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-menu-panel"
+            aria-label="Toggle navigation menu"
+            class="rounded-md border border-slate-200 p-2 text-slate-700 hover:bg-slate-50 lg:hidden"
+          >
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu-panel" class="hidden border-t border-slate-200 bg-white px-4 py-3 lg:hidden">
+        <nav aria-label="Mobile navigation" class="flex flex-col gap-2 text-sm font-medium text-slate-700">
+          <a href="/index.html" class="rounded-md bg-slate-100 px-3 py-2 text-slate-900">Compare Hosts</a>
+          <a href="/hostinger-vs-bluehost.html" class="rounded-md px-3 py-2 hover:bg-slate-50">Hostinger vs Bluehost</a>
+          <a href="/coupons.html" class="rounded-md px-3 py-2 hover:bg-slate-50">Coupons &amp; Deals</a>
+          <a href="/about.html" class="rounded-md px-3 py-2 hover:bg-slate-50">About SkyeFlare</a>
+          <a href="/contact.html" class="rounded-md px-3 py-2 hover:bg-slate-50">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="border-b border-slate-200 bg-slate-900 text-white">
+        <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+          <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+            <div class="lg:col-span-8">
+              <div class="flex flex-wrap items-center gap-2 text-xs text-slate-300">
+                <span>Independent Hosting Audit</span>
+                <span aria-hidden="true">&middot;</span>
+                <span>8 Major Providers</span>
+                <span aria-hidden="true">&middot;</span>
+                <span>Registry synced <span data-last-updated class="font-mono text-indigo-300">Nov 22, 2026</span></span>
+              </div>
+              <h1 class="mt-4 max-w-2xl text-3xl font-extrabold tracking-tight text-white text-balance sm:text-5xl">
+                See the real 3-year price behind every hosting deal.
+              </h1>
+              <p class="mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+                SkyeFlare does not sell hosting. We verify active promo codes and auto-applied checkout discounts across Hostinger, Bluehost, Namecheap, SiteGround, A2 Hosting, DreamHost, IONOS, and Cloudways—and expose every Year 2 renewal jump before you pay.
+              </p>
+              <div class="mt-7 flex flex-wrap items-center gap-4">
+                <a
+                  href="#smart-finder"
+                  class="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 sf-transition whitespace-nowrap"
+                >
+                  Find Your Best Match
+                </a>
+                <a
+                  href="#comparison-matrix"
+                  class="rounded-md border border-slate-700 bg-slate-800/60 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-slate-800 sf-transition whitespace-nowrap"
+                >
+                  Compare All 8 Hosts
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-4 rounded-lg border border-slate-800 bg-slate-950/60 p-5">
+              <div class="text-xs font-semibold text-indigo-300">Transparency Rules</div>
+              <dl class="mt-3 space-y-3 divide-y divide-slate-800 text-xs">
+                <div class="pt-1 flex items-baseline justify-between gap-4">
+                  <dt class="text-slate-400">Intro vs. Renewal</dt>
+                  <dd class="font-mono font-medium text-white tabular-nums">Both shown side-by-side</dd>
+                </div>
+                <div class="pt-3 flex items-baseline justify-between gap-4">
+                  <dt class="text-slate-400">Promo Policy</dt>
+                  <dd class="font-mono font-medium text-white tabular-nums">Zero hallucinated codes</dd>
+                </div>
+                <div class="pt-3 flex items-baseline justify-between gap-4">
+                  <dt class="text-slate-400">Sync Cadence</dt>
+                  <dd class="font-mono font-medium text-white tabular-nums">24h automated check</dd>
+                </div>
+                <div class="pt-3 flex items-baseline justify-between gap-4">
+                  <dt class="text-slate-400">TCO Horizons</dt>
+                  <dd class="font-mono font-medium text-white tabular-nums">12 / 24 / 36 months</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ad Slot: Header Leaderboard (Reserved min-height prevents CLS) -->
+      <div class="mx-auto max-w-6xl px-4 pt-6 sm:px-6">
+        <!-- AD SLOT: HEADER LEADERBOARD (728x90 desktop / 320x100 mobile) -->
+        <div
+          id="ad-slot-header"
+          class="ad-slot-frame flex min-h-[90px] w-full flex-col items-center justify-center px-4 py-3 text-center"
+          aria-label="Advertisement"
+        >
+          <span class="font-mono text-[11px] text-slate-400">Advertisement &middot; Partner Placement (728&times;90)</span>
+        </div>
+      </div>
+
+      <!-- Smart Filter & AI Recommendation Bar -->
+      <section id="smart-finder" class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+          <div class="flex flex-col gap-3 border-b border-slate-100 pb-5 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 class="text-xl font-bold text-slate-900 sm:text-2xl">Smart Filter &amp; Recommendation Engine</h2>
+              <p class="mt-1 text-sm text-slate-600">
+                Filter all 8 providers by workload, introductory budget, and non-negotiable features. Ranked by 36-month total cost.
+              </p>
+            </div>
+            <button
+              type="button"
+              id="filter-reset-btn"
+              class="self-start rounded-md border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 sf-transition whitespace-nowrap shrink-0 sm:self-auto"
+            >
+              Reset Filters
+            </button>
+          </div>
+
+          <div class="mt-5 grid gap-5 md:grid-cols-12">
+            <div class="md:col-span-4">
+              <label for="filter-site-type" class="block text-xs font-semibold text-slate-700">Website Type</label>
+              <select
+                id="filter-site-type"
+                class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-600 focus:outline-none"
+              >
+                <option value="all">All Website Types</option>
+                <option value="wordpress">WordPress Blog</option>
+                <option value="woocommerce">WooCommerce Store</option>
+                <option value="portfolio">Portfolio / Brochure Site</option>
+                <option value="agency">Agency / Managed Cloud VPS</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-3">
+              <label for="filter-budget" class="block text-xs font-semibold text-slate-700">Intro Budget Range</label>
+              <select
+                id="filter-budget"
+                class="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-600 focus:outline-none"
+              >
+                <option value="all">Any Monthly Intro Rate</option>
+                <option value="low">$1.00 – $3.00 / mo</option>
+                <option value="mid">$3.01 – $7.00 / mo</option>
+                <option value="high">$7.01+ / mo (Cloud / Flat)</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-5">
+              <span class="block text-xs font-semibold text-slate-700">Must-Have Requirements</span>
+              <div class="mt-2 grid grid-cols-2 gap-2.5 text-xs text-slate-700">
+                <label class="flex cursor-pointer items-center gap-2 rounded-md border border-slate-200 px-3 py-2 hover:bg-slate-50">
+                  <input type="checkbox" id="filter-freeDomain" class="h-4 w-4 rounded border-slate-300 text-indigo-700" />
+                  <span>Free 1st-Yr Domain</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-2 rounded-md border border-slate-200 px-3 py-2 hover:bg-slate-50">
+                  <input type="checkbox" id="filter-freeSsl" class="h-4 w-4 rounded border-slate-300 text-indigo-700" />
+                  <span>Free SSL Included</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-2 rounded-md border border-slate-200 px-3 py-2 hover:bg-slate-50">
+                  <input type="checkbox" id="filter-freeMigration" class="h-4 w-4 rounded border-slate-300 text-indigo-700" />
+                  <span>Free Site Migration</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-2 rounded-md border border-slate-200 px-3 py-2 hover:bg-slate-50">
+                  <input type="checkbox" id="filter-monthlyBilling" class="h-4 w-4 rounded border-slate-300 text-indigo-700" />
+                  <span>Monthly Billing Option</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div id="ai-recommendation-output" class="mt-6">
+            <div class="h-36 animate-pulse rounded-lg border border-slate-200 bg-slate-100"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Comparison Matrix -->
+      <section id="comparison-matrix" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+        <div class="flex flex-col gap-4 pb-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900 sm:text-2xl">Full Provider Comparison Matrix</h2>
+            <p id="comparison-match-count" class="mt-1 text-xs text-slate-500">Loading verified provider plans...</p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="inline-flex rounded-lg bg-slate-200/80 p-1" role="group" aria-label="Price display mode">
+              <button
+                type="button"
+                data-price-mode="intro"
+                aria-pressed="true"
+                class="rounded-md bg-white px-3 py-1.5 text-xs font-semibold text-slate-900 shadow-xs sf-transition whitespace-nowrap"
+              >
+                Intro Price
+              </button>
+              <button
+                type="button"
+                data-price-mode="renewal"
+                aria-pressed="false"
+                class="rounded-md px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 sf-transition whitespace-nowrap"
+              >
+                Renewal Price
+              </button>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <label for="comparison-sort" class="text-xs font-medium text-slate-600 whitespace-nowrap">Sort by</label>
+              <select
+                id="comparison-sort"
+                class="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-900 focus:border-indigo-600 focus:outline-none"
+              >
+                <option value="tco36">3-Year True Cost (Low–High)</option>
+                <option value="intro">Intro Price (Low–High)</option>
+                <option value="renewal">Renewal Price (Low–High)</option>
+                <option value="multiplier">Lowest Renewal Jump</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop Data Table -->
+        <div class="hidden overflow-hidden rounded-xl border border-slate-200 bg-white md:block">
+          <div class="table-scroll overflow-x-auto">
+            <table class="w-full border-collapse text-left text-sm">
+              <thead>
+                <tr class="border-b border-slate-200 bg-slate-50 text-xs font-semibold text-slate-600">
+                  <th scope="col" class="py-3.5 pl-4 pr-3">Provider &amp; Plan</th>
+                  <th scope="col" class="px-3 py-3.5">Monthly Rate</th>
+                  <th scope="col" class="px-3 py-3.5">36-Mo True Cost</th>
+                  <th scope="col" class="px-3 py-3.5">Resources</th>
+                  <th scope="col" class="px-3 py-3.5">Domain &amp; Refund</th>
+                  <th scope="col" class="px-3 py-3.5">Offer Verification</th>
+                  <th scope="col" class="py-3.5 pl-3 pr-4 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="comparison-table-body">
+                <tr>
+                  <td colspan="7" class="p-6 text-center text-sm text-slate-500">Loading verified deals...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Mobile Responsive Deal Cards -->
+        <div id="comparison-mobile-cards" class="grid gap-4 md:hidden"></div>
+      </section>
+
+      <!-- Ad Slot: In-Content Placement -->
+      <div class="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+        <!-- AD SLOT: IN-CONTENT RESPONSIVE -->
+        <div
+          id="ad-slot-incontent"
+          class="ad-slot-frame flex min-h-[100px] w-full flex-col items-center justify-center px-4 py-3 text-center"
+          aria-label="Advertisement"
+        >
+          <span class="font-mono text-[11px] text-slate-400">Advertisement &middot; Responsive In-Content Slot</span>
+        </div>
+      </div>
+
+      <!-- 1-Year vs 3-Year True Cost Calculator -->
+      <section id="cost-calculator" class="border-y border-slate-800 bg-slate-950 py-14 text-white">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="max-w-2xl">
+            <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              1-Year vs. 3-Year True Cost Calculator
+            </h2>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">
+              Headline "$1.00–$3.99/mo" ads hide two things: upfront multi-year prepay requirements and Year 2 renewal spikes. Calculate exact cash outlay over 12, 24, or 36 months.
+            </p>
+          </div>
+
+          <div class="mt-8 grid gap-8 lg:grid-cols-12">
+            <!-- Left Calculator Controls & Output -->
+            <div class="lg:col-span-8 rounded-xl border border-slate-800 bg-slate-900/60 p-6">
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="calc-provider" class="block text-xs font-medium text-slate-300">Hosting Provider</label>
+                  <select
+                    id="calc-provider"
+                    class="mt-1.5 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                  ></select>
+                </div>
+                <div>
+                  <label for="calc-plan" class="block text-xs font-medium text-slate-300">Plan Tier</label>
+                  <select
+                    id="calc-plan"
+                    class="mt-1.5 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                  ></select>
+                </div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-5">
+                <div class="inline-flex rounded-lg border border-slate-800 bg-slate-950 p-1" role="group" aria-label="Ownership horizon">
+                  <button
+                    type="button"
+                    data-calc-horizon="12"
+                    aria-pressed="false"
+                    class="rounded-md px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white sf-transition whitespace-nowrap"
+                  >
+                    12 Months (1 Yr)
+                  </button>
+                  <button
+                    type="button"
+                    data-calc-horizon="24"
+                    aria-pressed="false"
+                    class="rounded-md px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white sf-transition whitespace-nowrap"
+                  >
+                    24 Months (2 Yr)
+                  </button>
+                  <button
+                    type="button"
+                    data-calc-horizon="36"
+                    aria-pressed="true"
+                    class="rounded-md bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white sf-transition whitespace-nowrap"
+                  >
+                    36 Months (3 Yr)
+                  </button>
+                </div>
+
+                <label class="flex cursor-pointer items-center gap-2 text-xs text-slate-300">
+                  <input type="checkbox" id="calc-include-domain" checked class="h-4 w-4 rounded border-slate-600 bg-slate-900 text-indigo-600" />
+                  <span>Include ~$18.99/yr .com domain renewal</span>
+                </label>
+              </div>
+
+              <div id="calc-output" class="mt-5"></div>
+            </div>
+
+            <!-- Right 8-Provider Horizon Leaderboard -->
+            <div class="lg:col-span-4 rounded-xl border border-slate-800 bg-slate-900/40 p-5">
+              <h3 class="text-sm font-semibold text-white">All 8 Hosts Ranked by Total Cost</h3>
+              <p class="mt-1 text-xs text-slate-400">Click any host to inspect its full intro vs. renewal math.</p>
+              <div id="calc-leaderboard" class="mt-4 space-y-2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editorial Section + Sidebar Ad Slot -->
+      <section class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-12">
+          <article class="lg:col-span-8 space-y-6">
+            <div>
+              <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                How SkyeFlare Verifies Hosting Deals &amp; Exposes Renewal Traps
+              </h2>
+              <p class="mt-2 text-sm text-slate-500">
+                Editorial Methodology &middot; Updated <span data-last-updated>Nov 22, 2026</span>
+              </p>
+            </div>
+
+            <div class="space-y-4 text-base leading-relaxed text-slate-700">
+              <p>
+                Nearly every shared hosting provider uses dual-tier pricing: an aggressively discounted first-term rate designed to win signups, followed by an automated standard renewal rate that jumps between 150% and 350% once your initial term ends. Comparing only the headline monthly price leads buyers into unexpected Year 2 invoices.
+              </p>
+
+              <h3 class="pt-2 text-lg font-bold text-slate-900">01. Upfront Prepay vs. Monthly Flexibility</h3>
+              <p>
+                A "$2.49/mo" plan on Hostinger requires paying 48 months upfront ($119.52 at checkout), whereas SiteGround's "$3.99/mo" intro offer lasts only 12 months ($47.88) before renewing at $17.99/mo. Over a full 36-month website lifecycle, SiteGround's entry plan totals roughly $479.64 in hosting alone, while Cloudways' flat $11.00/mo pay-as-you-go cloud server totals $396.00 with zero contract lock-in.
+              </p>
+
+              <h3 class="pt-2 text-lg font-bold text-slate-900">02. Separating Real Promo Codes from Auto-Applied Offers</h3>
+              <p>
+                Many coupon aggregators publish fabricated strings like "SAVE90NOW" that fail at checkout. SkyeFlare explicitly distinguishes between providers that accept manual promo codes (such as Namecheap's monthly coupon hub) and providers that embed their deepest discounts directly into official checkout URLs without requiring a code field.
+              </p>
+
+              <h3 class="pt-2 text-lg font-bold text-slate-900">03. Hidden Domain Renewal Multipliers</h3>
+              <p>
+                "Free domain included" always applies strictly to Year 1 registration on select TLDs. Beginning in Month 13, registrars and hosts renew `.com` domains at standard rates between $14.95 and $21.99 per year. Our calculator factors domain renewals into every 24- and 36-month projection so your budget stays realistic.
+              </p>
+            </div>
+
+            <div class="rounded-lg border border-slate-200 bg-white p-5">
+              <h3 class="text-sm font-bold text-slate-900">Deep-Dive Comparison Available</h3>
+              <p class="mt-1 text-sm text-slate-600">
+                Deciding between the two most popular WordPress hosts? Read our side-by-side breakdown of hPanel vs. cPanel, NVMe storage limits, and 3-year renewal math.
+              </p>
+              <a
+                href="/hostinger-vs-bluehost.html"
+                class="mt-3 inline-block text-sm font-semibold text-indigo-700 hover:text-indigo-900 underline underline-offset-4"
+              >
+                Read Hostinger vs. Bluehost (2026 Audit) &rarr;
+              </a>
+            </div>
+          </article>
+
+          <aside class="lg:col-span-4 space-y-6">
+            <!-- AD SLOT: SIDEBAR RECTANGLE (300x250) -->
+            <div
+              id="ad-slot-sidebar"
+              class="ad-slot-frame flex min-h-[250px] w-full flex-col items-center justify-center p-4 text-center"
+              aria-label="Advertisement"
+            >
+              <span class="font-mono text-[11px] text-slate-400">Advertisement &middot; Sidebar Placement (300&times;250)</span>
+            </div>
+
+            <div class="rounded-lg border border-slate-200 bg-white p-5">
+              <h3 class="text-sm font-bold text-slate-900">Quick Links</h3>
+              <ul class="mt-3 space-y-2.5 text-sm">
+                <li>
+                  <a href="/coupons.html" class="text-indigo-700 hover:text-indigo-900 hover:underline">Browse All Active Hosting Deals &rarr;</a>
+                </li>
+                <li>
+                  <a href="/hostinger-vs-bluehost.html" class="text-indigo-700 hover:text-indigo-900 hover:underline">Hostinger vs. Bluehost Comparison &rarr;</a>
+                </li>
+                <li>
+                  <a href="/about.html" class="text-indigo-700 hover:text-indigo-900 hover:underline">How Our Automated Deal Sync Works &rarr;</a>
+                </li>
+                <li>
+                  <a href="/contact.html?report=General" class="text-indigo-700 hover:text-indigo-900 hover:underline">Report an Expired Coupon or Rate Change &rarr;</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div class="grid gap-8 md:grid-cols-4">
+          <div class="md:col-span-2">
+            <a href="/index.html" class="font-display text-base font-bold text-slate-900">SkyeFlare</a>
+            <p class="mt-2 max-w-md text-xs leading-relaxed text-slate-600">
+              Independent web hosting comparison, true 1-to-3 year cost calculator, and verified promo deal registry. SkyeFlare does not sell hosting directly and may earn referral commissions when you activate partner offers.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold text-slate-900">Comparison &amp; Deals</h3>
+            <ul class="mt-3 space-y-2 text-xs text-slate-600">
+              <li><a href="/index.html" class="hover:text-slate-900">Hosting Matrix</a></li>
+              <li><a href="/hostinger-vs-bluehost.html" class="hover:text-slate-900">Hostinger vs. Bluehost</a></li>
+              <li><a href="/coupons.html" class="hover:text-slate-900">Active Coupons &amp; Promos</a></li>
+              <li><a href="/index.html#cost-calculator" class="hover:text-slate-900">True Cost Calculator</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold text-slate-900">Trust &amp; Legal</h3>
+            <ul class="mt-3 space-y-2 text-xs text-slate-600">
+              <li><a href="/about.html" class="hover:text-slate-900">About &amp; Methodology</a></li>
+              <li><a href="/contact.html" class="hover:text-slate-900">Contact Us</a></li>
+              <li><a href="/privacy-policy.html" class="hover:text-slate-900">Privacy Policy</a></li>
+              <li><a href="/terms.html" class="hover:text-slate-900">Terms &amp; Affiliate Disclosure</a></li>
+              <li><button type="button" data-open-cookie-settings class="text-left hover:text-slate-900 underline underline-offset-2">Cookie Settings</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-col gap-2 border-t border-slate-100 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <span>&copy; 2026 SkyeFlare (skyeflare.com). All rights reserved.</span>
+          <span>Data synced <span data-last-updated class="font-mono">Nov 22, 2026</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/assets/app.js"></script>
+  </body>
+</html>
