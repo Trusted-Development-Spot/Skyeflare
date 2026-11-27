@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-27T04:27:53Z",
+  "lastUpdated": "2026-11-27T15:41:25Z",
   "source": "SkyeFlare Automated Deal Registry",
   "currency": "USD",
   "averageDomainRenewalYearly": 18.99,
@@ -60,7 +60,7 @@
         }
       ],
       "expiredCoupons": [],
-      "lastVerifiedAt": "2026-11-27T04:27:53Z"
+      "lastVerifiedAt": "2026-11-27T15:41:25Z"
     },
     {
       "id": "bluehost",
@@ -229,7 +229,7 @@
         }
       ],
       "expiredCoupons": [],
-      "lastVerifiedAt": "2026-11-27T04:27:53Z"
+      "lastVerifiedAt": "2026-11-27T15:41:25Z"
     },
     {
       "id": "a2hosting",
@@ -286,7 +286,7 @@
         }
       ],
       "expiredCoupons": [],
-      "lastVerifiedAt": "2026-11-27T04:27:53Z"
+      "lastVerifiedAt": "2026-11-27T15:41:25Z"
     },
     {
       "id": "dreamhost",
@@ -343,7 +343,7 @@
         }
       ],
       "expiredCoupons": [],
-      "lastVerifiedAt": "2026-11-27T04:27:53Z",
+      "lastVerifiedAt": "2026-11-27T15:41:25Z",
       "lastChangeNote": "intro $2.89 -> $1.99"
     },
     {
@@ -401,7 +401,7 @@
         }
       ],
       "expiredCoupons": [],
-      "lastVerifiedAt": "2026-11-27T04:27:53Z"
+      "lastVerifiedAt": "2026-11-27T15:41:25Z"
     },
     {
       "id": "cloudways",
@@ -458,7 +458,7 @@
         }
       ],
       "expiredCoupons": [],
-      "lastVerifiedAt": "2026-11-27T04:27:53Z"
+      "lastVerifiedAt": "2026-11-27T15:41:25Z"
     }
   ]
 }
