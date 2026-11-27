@@ -400,6 +400,24 @@ function buildRecommendationReason(provider, tco36, filters) {
 
 function renderPromoActionHtml(provider, compact = false) {
   const pad = compact ? 'px-3 py-1.5 text-xs' : 'px-4 py-2 text-xs';
+  const isExpired = String(provider.status || '').toLowerCase() === 'expired';
+  if (isExpired) {
+    return `
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="inline-flex items-center rounded-md border border-red-200 bg-red-50 ${pad} font-mono font-medium text-red-700 line-through cursor-not-allowed whitespace-nowrap shrink-0">
+          ${escapeHtml(provider.promoCode || 'Expired')}
+        </span>
+        <a
+          href="${escapeHtml(provider.officialOfferUrl)}"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          class="inline-flex items-center rounded-md border border-slate-300 bg-white ${pad} font-medium text-slate-700 hover:bg-slate-50 sf-transition whitespace-nowrap shrink-0"
+        >
+          Check Current Rate
+        </a>
+      </div>
+    `;
+  }
   if (provider.promoType === 'promo_code' && provider.promoCode) {
     return `
       <div class="flex flex-wrap items-center gap-2">
@@ -1088,15 +1106,37 @@ function renderCouponsDirectory() {
     return;
   }
 
-  const verifiedDate = formatDateReadable(state.data.lastUpdated);
+  const fallbackDate = formatDateReadable(state.data.lastUpdated);
 
   grid.innerHTML = filtered
     .map((p) => {
       const discountLabel =
         p.discountPercent > 0 ? `${p.discountPercent}% Off Intro Term` : 'Flat Monthly Rate';
+      const verifiedDate = p.lastVerifiedAt ? formatDateReadable(p.lastVerifiedAt) : fallbackDate;
+      const isExpired = String(p.status || '').toLowerCase() === 'expired';
+      const statusClass = isExpired ? 'text-red-700 font-semibold' : 'text-emerald-700 font-medium';
+
       const stepsHtml = (p.redemptionSteps || [])
         .map((step, i) => `<li class="text-xs leading-relaxed text-slate-600"><span class="font-mono font-semibold text-slate-900">${i + 1}.</span> ${escapeHtml(step)}</li>`)
         .join('');
+
+      const expiredHistory = Array.isArray(p.expiredCoupons) ? p.expiredCoupons : [];
+      const expiredHtml =
+        expiredHistory.length > 0
+          ? `
+            <div class="mt-3 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-600">
+              <span class="font-medium text-slate-700">Previous expired code:</span>
+              <span class="font-mono line-through text-slate-500">${escapeHtml(expiredHistory[0].code)}</span>
+              <span aria-hidden="true">&middot;</span>
+              <span>Expired ${escapeHtml(formatDateReadable(expiredHistory[0].expiredAt))}</span>
+              ${
+                expiredHistory[0].replacedBy
+                  ? `<span> &rarr; Replaced with <strong class="font-mono text-slate-900">${escapeHtml(expiredHistory[0].replacedBy)}</strong></span>`
+                  : '<span> &rarr; Switched to Auto-Applied Deal</span>'
+              }
+            </div>
+          `
+          : '';
 
       return `
         <article class="rounded-lg border border-slate-200 bg-white p-6 flex flex-col justify-between">
@@ -1107,7 +1147,7 @@ function renderCouponsDirectory() {
                 <span aria-hidden="true">&middot;</span>
                 <span>${escapeHtml(p.promoBadgeText)}</span>
                 <span aria-hidden="true">&middot;</span>
-                <span class="text-emerald-700 font-medium">${escapeHtml(p.status)}</span>
+                <span class="${statusClass}">${escapeHtml(p.status)}</span>
               </div>
               <span class="font-mono text-xs text-slate-500 tabular-nums">Checked ${escapeHtml(verifiedDate)}</span>
             </div>
@@ -1124,6 +1164,7 @@ function renderCouponsDirectory() {
             </div>
 
             <p class="mt-3 text-xs text-slate-500">${escapeHtml(p.promoTerms)}</p>
+            ${expiredHtml}
 
             <div class="mt-4 rounded-md border border-slate-100 bg-slate-50 p-3.5">
               <div class="text-xs font-semibold text-slate-900">How to redeem</div>
